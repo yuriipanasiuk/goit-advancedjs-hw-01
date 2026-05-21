@@ -16,7 +16,7 @@ const onFormChangeField = ({ target: formFieldEl }) => {
     formData[formFieldName] = formFieldEl.value;
     localStorage.setItem(FORM_KEY, JSON.stringify(formData));
   } catch (e) {
-    console.log(e.message);
+    console.log(e);
   }
 };
 
@@ -52,7 +52,7 @@ const onDownloadPage = () => {
       formElements[key].value = storageData[key];
     });
   } catch (e) {
-    console.log(e.message);
+    console.log(e);
   }
 };
 
